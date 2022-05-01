@@ -1,0 +1,58 @@
+@import "../../Sass/Variables.scss";
+
+.header {
+  background-color: $white;
+}
+
+.header__top {
+  padding: 10px 0;
+  @include desktop-mini;
+  border-bottom: 1px solid $line-gray;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__location {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-image: url("../../Assets/Icons/Location.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__select {
+    margin-right: 8px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url("../../Assets/Icons/Marker.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.header__check-address {
+  margin-right: 40px;
+  padding: 0;
+  @include desktop-mini;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

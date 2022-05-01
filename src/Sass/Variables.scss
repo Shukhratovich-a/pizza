@@ -1,0 +1,82 @@
+// COLORS
+$primary: #ff7010;
+$black: #191919;
+$gray-text: #a5a5a5;
+$line-gray: #f0f0f0;
+$backgorund-gray: #f9f9f9;
+$white: #ffffff;
+$red: #e23535;
+$light-primary: #ffeee2;
+$green: #24d17e;
+
+// FONTS
+// Desktop
+@mixin desktop-h1 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+@mixin desktop-h2 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@mixin desktop-h3 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin desktop-h4 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin desktop-big-text {
+  font-family: "SF pro text", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin desktop-subtitle {
+  font-family: "SF pro text", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin desktop-normal {
+  font-family: "SF pro text", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin desktop-subtitle-2 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin desktop-mini {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin desktop-mini-bold {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}

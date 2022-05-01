@@ -1,0 +1,62 @@
+@import "./Sass/Normalize.scss";
+@import "./Sass/Fonts.scss";
+@import "./Sass/Variables.scss";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+body {
+  height: 100%;
+  font-family: "Inter", "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: $backgorund-gray;
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1310px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 60px;
+}
