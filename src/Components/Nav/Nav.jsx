@@ -6,6 +6,9 @@ import Pizza from "../Lib/Icon/Pizza";
 import Sushi from "../Lib/Icon/Sushi";
 import Juice from "../Lib/Icon/Juice";
 import Snack from "../Lib/Icon/Snack";
+import Combo from "../Lib/Icon/Combo";
+import Dessert from "../Lib/Icon/Dessert";
+import Souce from "../Lib/Icon/Souce";
 
 import "swiper/css";
 import "./Nav.scss";
@@ -31,7 +34,7 @@ const Nav = () => {
       nav5: "Snack",
       nav6: "Combo",
       nav7: "Dessert",
-      nav8: "Souse",
+      nav8: "Souce",
     },
 
     uz: {
@@ -46,7 +49,7 @@ const Nav = () => {
     },
   };
 
-  const lang = "uz";
+  const lang = "ru";
 
   return (
     <nav className="nav">
@@ -94,7 +97,7 @@ const Nav = () => {
 
           <SwiperSlide className="nav__item">
             <Link className="nav__link" to={"/id"}>
-              <Promotion />
+              <Combo />
 
               <span className="nav__link__text">{nav[lang].nav6}</span>
             </Link>
@@ -102,7 +105,7 @@ const Nav = () => {
 
           <SwiperSlide className="nav__item">
             <Link className="nav__link" to={"/id"}>
-              <Promotion />
+              <Dessert />
 
               <span className="nav__link__text">{nav[lang].nav7}</span>
             </Link>
@@ -110,7 +113,7 @@ const Nav = () => {
 
           <SwiperSlide className="nav__item">
             <Link className="nav__link" to={"/id"}>
-              <Promotion />
+              <Souce />
 
               <span className="nav__link__text">{nav[lang].nav8}</span>
             </Link>
