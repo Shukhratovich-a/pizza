@@ -1,18 +1,25 @@
 @import "../../Sass/Variables.scss";
 
 .header {
-  background-color: $white;
+  margin-bottom: 30px;
 }
 
 .header__top {
   padding: 10px 0;
   @include desktop-mini;
+  background-color: $white;
   border-bottom: 1px solid $line-gray;
 
   .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
+}
+
+.header__top__left {
+  display: flex;
+  align-items: center;
 }
 
 .header__location {
@@ -20,16 +27,10 @@
   align-items: center;
   margin-right: 40px;
 
-  &::before {
-    content: "";
+  svg {
     display: block;
-    width: 20px;
-    height: 20px;
     margin-right: 8px;
-    background-image: url("../../Assets/Icons/Location.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    color: $primary;
   }
 
   &__select {
@@ -55,4 +56,102 @@
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header__delivery-time {
+  span {
+    margin-right: 4px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.header__top__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__work-time {
+  margin-right: 40px;
+}
+
+.header__sign-in {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  @include desktop-mini;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    margin-right: 8px;
+    color: $primary;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header__bottom {
+  margin-bottom: 30px;
+  padding: 12px 0;
+  background-color: $white;
+  border-bottom: 1px solid $line-gray;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  @include desktop-big-text;
+  color: inherit;
+  text-decoration: none;
+
+  svg {
+    color: $primary;
+  }
+
+  &__text {
+    margin-left: 12px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  padding: 8px;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: $primary;
+
+  svg {
+    margin-right: 8px;
+  }
+
+  span {
+    @include desktop-normal;
+  }
 }
