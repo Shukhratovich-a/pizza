@@ -1,4 +1,4 @@
-import Sell from "../../Components/Sell/Sell";
+// import Sell from "../../Components/Sell/Sell";
 
 const Home = () => {
   return (
