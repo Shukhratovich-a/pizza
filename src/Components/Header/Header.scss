@@ -155,3 +155,57 @@
     @include desktop-normal;
   }
 }
+
+.header__burger {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media only screen and(max-width: 1200px) {
+  .header__bottom {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and(max-width: 880px) {
+  .header__top__left {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .header__button {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
+@media only screen and(max-width: 500px) {
+  .header__top {
+    @include mobile-mini;
+  }
+
+  .header__location {
+    margin: 0;
+
+    svg {
+      margin-right: 4px;
+    }
+
+    &__select {
+      margin: 0;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .header__bottom {
+    padding: 15px 0;
+  }
+}

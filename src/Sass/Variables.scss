@@ -81,3 +81,60 @@ $green: #24d17e;
   font-size: 14px;
   line-height: 18px;
 }
+
+// Mobile
+@mixin mobile-h1 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+@mixin mobile-h2 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin mobile-h3 {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin mobile-big-text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin mobile-subtitle {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin mobile-normal {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin mobile-mini {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin mobile-mini-bold {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}

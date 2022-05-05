@@ -6,7 +6,7 @@
   background-color: $white;
   border: 1px solid $line-gray;
   border-radius: 12px;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 
   &:first-child {
     .nav__link {
@@ -16,6 +16,10 @@
         color: $red;
       }
     }
+  }
+
+  &:hover {
+    background-color: rgba($color: $primary, $alpha: 0.07);
   }
 
   &:active {
@@ -32,6 +36,9 @@
   color: $primary;
 
   svg {
+    display: flex;
+    width: 32px;
+    height: 32px;
     margin-bottom: 8px;
   }
 
@@ -39,5 +46,47 @@
     @include desktop-big-text;
     color: $black;
     text-align: center;
+  }
+}
+
+@media only screen and(max-width: 1330px) {
+  .nav {
+    .container {
+      overflow: hidden;
+    }
+  }
+
+  .nav__list {
+    overflow: visible;
+  }
+}
+
+@media only screen and(max-width: 1200px) {
+  .nav__link {
+    padding: 12px;
+  }
+}
+
+@media only screen and(max-width: 500px) {
+
+  .nav__item {
+    width: auto;
+  }
+
+  .nav__link {
+    flex-direction: row;
+    padding: 8px 12px;
+
+    svg {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      margin-right: 8px;
+    }
+
+    &__text {
+      @include mobile-normal;
+    }
   }
 }

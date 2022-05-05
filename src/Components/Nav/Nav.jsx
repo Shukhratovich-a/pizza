@@ -10,6 +10,8 @@ import Combo from "../Lib/Icon/Combo";
 import Dessert from "../Lib/Icon/Dessert";
 import Souce from "../Lib/Icon/Souce";
 
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
+
 import "swiper/css";
 import "./Nav.scss";
 
@@ -51,10 +53,17 @@ const Nav = () => {
 
   const lang = "ru";
 
+  const screenWidth = useWindowDimensions();
+
   return (
     <nav className="nav">
       <div className="container">
-        <Swiper className="nav__list" spaceBetween={30} slidesPerView={8}>
+        <Swiper
+          className="nav__list"
+          spaceBetween={screenWidth <= 500 ? 12 : screenWidth <= 1200 ? 20 : 30}
+          // slidesPerView={screenWidth > 1020 ? 8 : screenWidth > 500 ? 6 : "auto"}
+          slidesPerView={screenWidth <= 500 ? "auto" : screenWidth <= 1020 ? 6 : 8}
+        >
           <SwiperSlide className="nav__item">
             <Link className="nav__link" to={"/id"}>
               <Promotion />
