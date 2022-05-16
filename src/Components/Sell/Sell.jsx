@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Mousewheel } from "swiper";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
@@ -10,21 +10,22 @@ import "./Sell.scss";
 
 const Sell = () => {
   const screenWidth = useWindowDimensions();
-console.log((screenWidth - 40 - 60) / 300);
+  
   return (
     <section className="sell">
       <div className="container">
         <Swiper
           className="sell__list"
-          spaceBetween={screenWidth <= 1200 ? 30 : 30}
-          slidesPerView={screenWidth > 1330 ? 4 : (screenWidth - 40 - 60) / 300}
-          // slidesPerView={screenWidth <= 1100 ? 3.5 : screenWidth <= 965 ? 2 : 4}
-          // slidesPerView={4}
+          spaceBetween={screenWidth <= 1100 ? 20 : 30}
+          slidesPerView={screenWidth <= 1100 ? 3.5 : screenWidth <= 965 ? 2 : 4}
+          mousewheel={{
+            forceToAxis: true,
+          }}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay]}
+          modules={[Autoplay, Mousewheel]}
           loop={true}
         >
           <SwiperSlide className="sell__item">

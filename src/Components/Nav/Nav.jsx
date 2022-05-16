@@ -1,5 +1,7 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel } from "swiper";
 
 import Promotion from "../Lib/Icon/Promotion";
 import Pizza from "../Lib/Icon/Pizza";
@@ -13,6 +15,7 @@ import Souce from "../Lib/Icon/Souce";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 import "swiper/css";
+import "swiper/css/bundle";
 import "./Nav.scss";
 
 const Nav = () => {
@@ -61,8 +64,21 @@ const Nav = () => {
         <Swiper
           className="nav__list"
           spaceBetween={screenWidth <= 500 ? 12 : screenWidth <= 1200 ? 20 : 30}
-          // slidesPerView={screenWidth > 1020 ? 8 : screenWidth > 500 ? 6 : "auto"}
-          slidesPerView={screenWidth <= 500 ? "auto" : screenWidth <= 1020 ? 6 : 8}
+          slidesPerView={
+            screenWidth <= 500
+              ? "auto"
+              : screenWidth <= 580
+              ? 3.5
+              : screenWidth <= 620
+              ? 4.5
+              : screenWidth <= 768
+              ? 5.2
+              : screenWidth <= 1020
+              ? 6
+              : 8
+          }
+          mousewheel={{ forceToAxis: true }}
+          modules={[Mousewheel]}
         >
           <SwiperSlide className="nav__item">
             <Link className="nav__link" to={"/id"}>

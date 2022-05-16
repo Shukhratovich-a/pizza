@@ -38,8 +38,20 @@
   color: $white;
 }
 
-// @media only screen and(max-width: 1200px) {
-//   .sell__item__inner {
-//     padding: 12px;
-//   }
-// }
+@media only screen and(max-width: 1200px) {
+  .sell__item__inner {
+    padding: 12px;
+  }
+}
+
+@media only screen and(max-width: 1020px) {
+  .sell {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .sell__list {
+    padding: 0 20px;
+  }
+}
